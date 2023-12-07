@@ -10,19 +10,26 @@ body {
 /*
 * Header
 */
-
 header {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  margin: 10px;
+  padding: 10px;
+  position: sticky;
+  top: 0px;
+  background: #f5f7f0;
 }
+
 header img {
   height: 40px;
 }
 nav {
   margin-left: auto;
   margin-right: 40px;
+}
+
+.logo {
+  margin-right: auto;
 }
 
 ul {
@@ -42,6 +49,84 @@ li a:hover {
 }
 li a.active {
   color: #d45354;
+}
+
+/* 
+* Burgermenu 
+*/
+@media (max-width: 800px) {
+  .logo {
+    position: relative;
+    z-index: 100;
+  }
+  #menu-primary {
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    height: 45%;
+    width: 100%;
+    right: -110%;
+    background: #f5f7f0;
+    transition: all 0.2s ease-in-out;
+  }
+  #menu-primary.active {
+    right: -10%;
+  }
+
+  #menu-primary ul {
+    flex-direction: column;
+    margin-top: 100px;
+    align-items: center;
+  }
+  .toggle {
+    display: flex !important;
+    border: 0px;
+    background: transparent;
+    align-items: center;
+    z-index: 100;
+  }
+
+  .toggle .line {
+    height: 2px;
+    width: 30px;
+    background: #d45354;
+    display: block;
+    position: relative;
+  }
+  .toggle .line:after {
+    content: "";
+    height: 2px;
+    width: 30px;
+    background: #d45354;
+    display: block;
+    position: absolute;
+    top: -8px;
+
+    transition: all 0.2s ease-in-out;
+  }
+  .toggle .line:before {
+    content: "";
+    height: 2px;
+    width: 30px;
+    background: #d45354;
+    display: block;
+    position: absolute;
+    bottom: -8px;
+
+    transition: all 0.2s ease-in-out;
+  }
+
+  .toggle.active .line {
+    background: transparent !important;
+  }
+  .toggle.active .line:after {
+    top: 0px;
+    transform: rotate(45deg);
+  }
+  .toggle.active .line:before {
+    top: 0px;
+    transform: rotate(-45deg);
+  }
 }
 
 /*Text, fonts etc*/
@@ -69,4 +154,85 @@ h4 {
 
 p {
   font-family: "theFont", sans-serif;
+}
+
+a {
+  font-family: "theFont", sans-serif;
+}
+
+/*Button*/
+.btn {
+  display: block;
+  width: 100px;
+  height: 20px;
+  background-color: #d45354;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  font-weight: 500;
+  line-height: 25px;
+  text-decoration: none;
+  margin: 10px;
+  border: solid 2px #d45354;
+}
+
+.btn:hover {
+  border: solid 2px #000;
+  background-color: #f5f7f0;
+  color: #d45354;
+}
+
+/*Menu*/
+.pdf {
+  height: 90%;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 2%;
+}
+
+#menuPopup {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+#winePopup {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+#barPopup {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/*FAQ*/
+.faqBox {
+  background: grey;
+  margin-top: 10px;
+}
+
+.popud {
+  display: none;
 }

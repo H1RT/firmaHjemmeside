@@ -6,12 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Om os </title>
     <link rel="stylesheet" href="styles/style.css">
+    <script src="/javascript/script.js" defer></script>
 </head>
 
 <body>
-    <header>
-        <img src="images/lagologo.png" alt="">
-        <nav>
+    <header id="active-menu">
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/lagologo.png" alt="">
+            </a>
+        </div>
+        <div id="toggle" class="toggle hidden-desktop"
+            onclick="toggleMenu('menu-primary'); toggleMenu('toggle'); toggleMenu('header'); ">
+            <span class="line"></span>
+        </div>
+
+        <nav id="menu-primary">
             <ul>
                 <li>
                     <a href="index.html">Forside</a>
@@ -19,7 +29,6 @@
                 <li>
                     <a href="menu.html">Menu</a>
                 </li>
-
                 <li>
                     <a href="selskaber.html">Selskaber</a>
                 </li>
@@ -34,6 +43,7 @@
                 </li>
             </ul>
         </nav>
+        </div>
     </header>
     <h1>hej</h1>
 </body>

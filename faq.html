@@ -6,12 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAQ</title>
     <link rel="stylesheet" href="styles/style.css">
+    <script src="/javascript/script.js" defer></script>
 </head>
 
 <body>
-    <header>
-        <img src="images/lagologo.png" alt="">
-        <nav>
+    <header id="active-menu">
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/lagologo.png" alt="">
+            </a>
+        </div>
+        <div id="toggle" class="toggle hidden-desktop"
+            onclick="toggleMenu('menu-primary'); toggleMenu('toggle'); toggleMenu('header'); ">
+            <span class="line"></span>
+        </div>
+
+        <nav id="menu-primary">
             <ul>
                 <li>
                     <a href="index.html">Forside</a>
@@ -33,8 +43,34 @@
                 </li>
             </ul>
         </nav>
+        </div>
     </header>
     <h1>hej</h1>
+
+    <div class="faqBox" onclick="faq('faq0')">
+        <h1>Bordbooking</h1>
+        <div class="popud" id="faq0">
+            <p>Du kan booke bord hos os ved at klikke på knappen herunder</p>
+        </div>
+    </div>
+
+    <div class="faqBox" onclick="faq('faq1')">
+        <h1>Mad</h1>
+        <div class="popud" id="faq1">
+            <p>Vi serverer mad</p>
+        </div>
+    </div>
+
+    <div class="faqBox" onclick="faq('faq2')">
+        <h1>Små gæster</h1>
+        <div class="popud" id="faq2">
+            <p>Er også velkomne</p>
+        </div>
+    </div>
+
+
+
+
 </body>
 
 </html>
