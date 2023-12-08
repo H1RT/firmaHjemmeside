@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/layout.css">
     <script src="/javascript/script.js" defer></script>
 </head>
 
@@ -53,18 +54,28 @@
 
 
     <div id="menuPopup">
+        <div class="closeDiv">
+            <span class="close" onclick="popdown('menuPopup')">Close menu &times;</span>
+        </div>
+
         <div class="pdf">
             <object data="pdf/menu.pdf" type="application/pdf" height="100%" width="100%"></object>
         </div>
     </div>
 
     <div id="winePopup">
+        <div class="closeDiv">
+            <span class="close" onclick="popdown('winePopup')">Close wine list &times;</span>
+        </div>
         <div class="pdf">
             <object data="pdf/winelist.pdf" type="application/pdf" height="100%" width="100%"></object>
         </div>
     </div>
 
     <div id="barPopup">
+        <div class="closeDiv">
+            <span class="close" onclick="popdown('barPopup')">Close bar list &times;</span>
+        </div>
         <div class="pdf">
             <object data="pdf/barlist.pdf" type="application/pdf" height="100%" width="100%"></object>
         </div>

@@ -1,5 +1,6 @@
 function faq(faqNumber) {
-  document.getElementById(faqNumber).style.display = "block";
+  let currentFaq = document.getElementById(faqNumber);
+  currentFaq.style.display = "block";
 
   for (let i = 0; i < document.getElementsByClassName("faqBox").length; i++) {
     if (faqNumber == "faq" + i) {
@@ -14,19 +15,13 @@ function popup(wineOrMenu) {
   document.getElementById(wineOrMenu).style.display = "block";
 }
 
-function toggleMenu(e) {
-  document.getElementById(e).classList.toggle("active");
+function popdown(wineOrMenu) {
+  document.getElementById(wineOrMenu).style.display = "none";
 }
 
 /*
  * Burgermenu
- 
-document.addEventListener("DOMContentLoaded", function () {
-  const menuIcon = document.getElementById("menu-icon");
-  const active = document.getElementById("active-menu");
-
-  menuIcon.addEventListener("click", function () {
-    active.classList.toggle("menu-opened");
-  });
-});
-*/
+ */
+function toggleMenu(e) {
+  document.getElementById(e).classList.toggle("active");
+}

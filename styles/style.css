@@ -5,6 +5,9 @@
 
 body {
   background-color: #f5f7f0;
+  max-width: 1200px;
+  margin: 0px auto;
+  padding: 0 20px;
 }
 
 /*
@@ -14,10 +17,11 @@ header {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  padding: 10px;
+  padding: 10px 0;
   position: sticky;
   top: 0px;
   background: #f5f7f0;
+  margin-bottom: 30px;
 }
 
 header img {
@@ -25,7 +29,7 @@ header img {
 }
 nav {
   margin-left: auto;
-  margin-right: 40px;
+  margin-right: 20px;
 }
 
 .logo {
@@ -138,26 +142,36 @@ li a.active {
 
 h1 {
   font-family: "theFont", sans-serif;
+  font-size: 48px;
 }
 
 h2 {
   font-family: "theFont", sans-serif;
+  font-size: 40px;
 }
 
 h3 {
   font-family: "theFont", sans-serif;
+  font-size: 36px;
 }
 
 h4 {
   font-family: "theFont", sans-serif;
+  font-size: 30px;
 }
 
 p {
   font-family: "theFont", sans-serif;
+  font-size: 18px;
 }
 
 a {
   font-family: "theFont", sans-serif;
+  font-size: 18px;
+}
+
+.ta-center {
+  text-align: center;
 }
 
 /*Button*/
@@ -178,7 +192,7 @@ a {
 }
 
 .btn:hover {
-  border: solid 2px #000;
+  border: solid 2px #d45354;
   background-color: #f5f7f0;
   color: #d45354;
 }
@@ -227,10 +241,46 @@ a {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
+.close {
+  font-family: "theFont", sans-serif;
+  font-size: 20px;
+  color: #f5f7f0;
+  padding: 5px;
+}
+
+.closeDiv {
+  text-align: right;
+  cursor: pointer;
+}
+
 /*FAQ*/
 .faqBox {
-  background: grey;
-  margin-top: 10px;
+  border: 3px solid #d45354;
+  background-color: #d45354;
+  border-radius: 10px;
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 17px;
+  cursor: pointer;
+  color: #f5f7f0;
+}
+
+.faqBox:hover {
+  background-color: #f5f7f0;
+  color: #d45354;
+}
+
+.faqText {
+  margin-right: auto;
+  margin-left: 20px;
+}
+
+.faqAnswer {
+  color: black;
+}
+
+.plus {
+  margin-right: 20px;
 }
 
 .popud {

@@ -1,0 +1,53 @@
+/*
+* Forside
+*/
+
+.text-image {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-bottom: 80px;
+}
+
+@media (max-width: 800px) {
+  .text-image {
+    grid-template-columns: 1fr;
+  }
+}
+.text-image.order .image {
+  order: -1;
+}
+@media (max-width: 800px) {
+  .text-image.order .image {
+    order: 1;
+  }
+}
+
+.text-image .content {
+  margin: auto 0;
+  /*text-align: center;*/
+}
+
+.text-image .image {
+  height: 400px;
+  width: 100%;
+  border-radius: 32px;
+  background: #cacaca;
+}
+
+.instagram {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+}
+@media (max-width: 800px) {
+  .instagram {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+}
+/*Flex*/
+.flex {
+  display: flex;
+}
