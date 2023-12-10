@@ -1,12 +1,24 @@
 function faq(faqNumber) {
   let currentFaq = document.getElementById(faqNumber);
-  currentFaq.style.display = "block";
+
+  if (!currentFaq.parentElement.classList.contains("activeFaq")) {
+    currentFaq.style.display = "block";
+    currentFaq.parentElement.classList.add("activeFaq");
+  } else if (currentFaq.parentElement.classList.contains("activeFaq")) {
+    currentFaq.style.display = "none";
+    currentFaq.parentElement.classList.remove("activeFaq");
+  } else {
+    alert("Something went wrong, refresh the page");
+  }
 
   for (let i = 0; i < document.getElementsByClassName("faqBox").length; i++) {
     if (faqNumber == "faq" + i) {
-      console.log("Do nothing");
+      //Ingen kode, da denne FAQ boks skal forblive åben
     } else {
       document.getElementById("faq" + i).style.display = "none";
+      document
+        .getElementById("faq" + i)
+        .parentElement.classList.remove("activeFaq");
     }
   }
 }

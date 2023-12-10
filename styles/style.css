@@ -270,6 +270,18 @@ a {
   color: #d45354;
 }
 
+.activeFaq {
+  background-color: #f5f7f0;
+}
+
+.activeFaq h1 {
+  color: #d45354;
+}
+
+.activeFaq .plus {
+  rotate: 45deg;
+}
+
 .faqText {
   margin-right: auto;
   margin-left: 20px;
