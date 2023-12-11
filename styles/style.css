@@ -28,16 +28,19 @@ main.mainMenu {
 * Header
 */
 header {
+  position: sticky;
+  top: 0px;
+  background-color: var(--background);
+}
+
+.inner-header {
+  margin-bottom: 30px;
+  max-width: 1200px;
+  margin: 0px auto;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   padding: 20px;
-  position: sticky;
-  top: 0px;
-  background-color: var(--background);
-  margin-bottom: 30px;
-  max-width: 1200px;
-  margin: 0px auto;
 }
 
 header img {
@@ -72,11 +75,6 @@ li a:hover {
 }
 li a.active {
   color: var(--primary);
-}
-
-a svg {
-  fill: var(--primary);
-  stroke: var(--primary);
 }
 
 /* 
@@ -288,16 +286,19 @@ a:hover {
     url(/images/IMG_3268.jpg);
   background-size: cover;
   background-position: center;
-  position: relative;
 }
 
 .menuContainer {
-  border: 3px solid white;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5%;
+}
+
+.menuHeader {
+  color: #f5f7f0;
 }
 
 .btnContainer {
@@ -374,7 +375,7 @@ footer {
 .inner-footer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 200px;
+  gap: 80px;
   padding: 100px 0;
   max-width: 1200px;
   margin: 0px auto;
@@ -389,6 +390,20 @@ footer {
   }
 }
 
-footer .inner-footer .logo img {
+.info p {
+  margin-top: 10px;
+}
+
+.info-2 h4 {
+  margin-bottom: 10px;
+}
+
+footer iframe {
   width: 100%;
+  height: 200px;
+  border-radius: 16px;
+}
+
+footer .inner-footer .logo img {
+  width: 80%;
 }
