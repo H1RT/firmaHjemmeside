@@ -7,13 +7,21 @@ html {
   --primary: #d45354;
   --font: "theFont", sans-serif;
   --transiton: all 1s ease-in-out;
+  --background: #f5f7f0;
 }
 
 body {
-  background-color: #f5f7f0;
+  background-color: var(--background);
+}
+
+main {
   max-width: 1200px;
   margin: 0px auto;
   padding: 0 20px;
+}
+
+main.mainMenu {
+  max-width: inherit;
 }
 
 /*
@@ -23,11 +31,13 @@ header {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  padding: 10px 0;
+  padding: 20px;
   position: sticky;
   top: 0px;
-  background: #f5f7f0;
+  background-color: var(--background);
   margin-bottom: 30px;
+  max-width: 1200px;
+  margin: 0px auto;
 }
 
 header img {
@@ -64,6 +74,11 @@ li a.active {
   color: var(--primary);
 }
 
+a svg {
+  fill: var(--primary);
+  stroke: var(--primary);
+}
+
 /* 
 * Burgermenu 
 */
@@ -79,7 +94,7 @@ li a.active {
     height: 45%;
     width: 100%;
     right: -110%;
-    background: #f5f7f0;
+    background-color: var(--background);
     transition: var(--transiton);
   }
   #menu-primary.active {
@@ -145,7 +160,8 @@ li a.active {
 /*Text, fonts etc*/
 @font-face {
   font-family: "theFont";
-  src: url(/font/ApercuPro.woff2) format("woff2"), url(/font/ApercuPro.woff) format("woff");
+  src: url(/font/ApercuPro.woff2) format("woff2"),
+    url(/font/ApercuPro.woff) format("woff");
 }
 
 h1 {
@@ -183,25 +199,30 @@ a {
 }
 
 /*Button*/
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+a:hover {
+}
+
 .btn {
   display: block;
-  width: 100px;
-  height: 20px;
+  width: 140px;
   background: var(--primary);
-  padding: 10px;
+  padding: 10px 20px;
   text-align: center;
   border-radius: 5px;
   color: white;
   font-weight: 500;
   line-height: 25px;
   text-decoration: none;
-  margin: 10px;
   border: solid 2px var(--primary);
 }
 
 .btn:hover {
   border: solid 2px var(--primary);
-  background-color: #f5f7f0;
+  background-color: var(--background);
   color: var(--primary);
 }
 
@@ -252,13 +273,37 @@ a {
 .close {
   font-family: var(--font), sans-serif;
   font-size: 20px;
-  color: #f5f7f0;
+  color: var(--background);
   padding: 5px;
 }
 
 .closeDiv {
   text-align: right;
   cursor: pointer;
+}
+
+.mainMenu {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/images/IMG_3268.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.menuContainer {
+  border: 3px solid white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.btnContainer {
+  justify-content: center;
+  display: flex;
+  gap: 30px;
 }
 
 /*FAQ*/
@@ -271,16 +316,16 @@ a {
   margin: 0 auto;
   margin-top: 17px;
   cursor: pointer;
-  color: #f5f7f0;
+  color: var(--background);
 }
 
 .faqBox:hover {
-  background-color: #f5f7f0;
+  background-color: var(--background);
   color: var(--primary);
 }
 
 .activeFaq {
-  background-color: #f5f7f0;
+  background-color: var(--background);
 }
 
 .activeFaq h1 {
@@ -306,14 +351,44 @@ a {
 }
 
 .popud {
+  transition: max-height 4s ease-in-out;
   transition: var(--transiton);
-  padding: 20px;
+  max-height: 0;
+  overflow: hidden;
 }
 
-.popud.none {
-  display: none;
+.faqanimation {
+  transition: max-height 4s ease-in-out;
+  max-height: 1000px;
 }
 
-.popud.block {
-  display: block;
+/*
+*Footer
+*/
+footer {
+  margin-top: 50px;
+  background-color: var(--background);
+  border-top: 1px solid var(--primary);
+}
+
+.inner-footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 200px;
+  padding: 100px 0;
+  max-width: 1200px;
+  margin: 0px auto;
+}
+@media (max-width: 800px) {
+  .inner-footer {
+    grid-template-columns: 1fr;
+    padding-left: 20px;
+    padding-right: 20px;
+    gap: 30px;
+    padding: 50px 20px;
+  }
+}
+
+footer .inner-footer .logo img {
+  width: 100%;
 }

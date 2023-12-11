@@ -2,10 +2,10 @@ function faq(faqNumber) {
   let currentFaq = document.getElementById(faqNumber);
 
   if (!currentFaq.parentElement.classList.contains("activeFaq")) {
-    currentFaq.style.display = "block";
+    currentFaq.classList.add("faqanimation");
     currentFaq.parentElement.classList.add("activeFaq");
   } else if (currentFaq.parentElement.classList.contains("activeFaq")) {
-    currentFaq.style.display = "none";
+    currentFaq.classList.remove("faqanimation");
     currentFaq.parentElement.classList.remove("activeFaq");
   } else {
     alert("Something went wrong, refresh the page");
@@ -15,8 +15,10 @@ function faq(faqNumber) {
     if (faqNumber == "faq" + i) {
       //Ingen kode, da denne FAQ boks skal forblive åben
     } else {
-      document.getElementById("faq" + i).style.display = "none";
-      document.getElementById("faq" + i).parentElement.classList.remove("activeFaq");
+      document.getElementById("faq" + i).classList.remove("faqanimation");
+      document
+        .getElementById("faq" + i)
+        .parentElement.classList.remove("activeFaq");
     }
   }
 }

@@ -47,42 +47,76 @@
         </nav>
         </div>
     </header>
-    <h1>hej</h1>
-    <a class="btn" href="javascript:popup('menuPopup')">Menu</a>
-    <a class="btn" href="javascript:popup('winePopup')">Wine list</a>
-    <a class="btn" href="javascript:popup('barPopup')">Bar list</a>
-
-
-
-    <div id="menuPopup">
-        <div class="closeDiv">
-            <span class="close" onclick="popdown('menuPopup')">Close menu &times;</span>
+    <main class="mainMenu">
+        <div class="menuContainer">
+            <h1 class="ta-center menuHeader">Our menus</h1>
+            <div class="btnContainer">
+                <a class="btn" href="javascript:popup('menuPopup')">Menu</a>
+                <a class="btn" href="javascript:popup('winePopup')">Wine list</a>
+                <a class="btn" href="javascript:popup('barPopup')">Bar list</a>
+            </div>
         </div>
 
-        <div class="pdf">
-            <object data="pdf/menu.pdf" type="application/pdf" height="100%" width="100%"></object>
-        </div>
-    </div>
+        <div id="menuPopup">
+            <div class="closeDiv">
+                <span class="close" onclick="popdown('menuPopup')">Close menu &times;</span>
+            </div>
 
-    <div id="winePopup">
-        <div class="closeDiv">
-            <span class="close" onclick="popdown('winePopup')">Close wine list &times;</span>
-        </div>
-        <div class="pdf">
-            <object data="pdf/winelist.pdf" type="application/pdf" height="100%" width="100%"></object>
-        </div>
-    </div>
-
-    <div id="barPopup">
-        <div class="closeDiv">
-            <span class="close" onclick="popdown('barPopup')">Close bar list &times;</span>
-        </div>
-        <div class="pdf">
-            <object data="pdf/barlist.pdf" type="application/pdf" height="100%" width="100%"></object>
+            <div class="pdf">
+                <object data="pdf/menu.pdf" type="application/pdf" height="100%" width="100%"></object>
+            </div>
         </div>
 
-    </div>
+        <div id="winePopup">
+            <div class="closeDiv">
+                <span class="close" onclick="popdown('winePopup')">Close wine list &times;</span>
+            </div>
+            <div class="pdf">
+                <object data="pdf/winelist.pdf" type="application/pdf" height="100%" width="100%"></object>
+            </div>
+        </div>
 
+        <div id="barPopup">
+            <div class="closeDiv">
+                <span class="close" onclick="popdown('barPopup')">Close bar list &times;</span>
+            </div>
+            <div class="pdf">
+                <object data="pdf/barlist.pdf" type="application/pdf" height="100%" width="100%"></object>
+            </div>
+
+        </div>
+    </main>
+    <footer>
+        <div class="inner-footer">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/lagologo.png" alt="">
+                </a>
+                <p>Kom ind på lago og få en oplevelse for livet.</p>
+            </div>
+            <div class="info">
+                <h4>Info:</h4>
+                <p>Adresse:</p>
+                <p>Mail:</p>
+                <p>Telefonnummer</p>
+            </div>
+            <div class="info-2">
+                <h4>Sociale medier:</h4>
+                <a href="https://www.instagram.com/restaurant.lago/">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27">
+                        <path
+                            d="M19.549 0H7.451A7.461 7.461 0 000 7.451v12.1A7.461 7.461 0 007.451 27h12.1A7.461 7.461 0 0027 19.549V7.451A7.461 7.461 0 0019.549 0zM24.6 19.549a5.066 5.066 0 01-5.051 5.051H7.451A5.066 5.066 0 012.4 19.549V7.451A5.066 5.066 0 017.451 2.4h12.1A5.066 5.066 0 0124.6 7.451z">
+                        </path>
+                        <path
+                            d="M13.502 6.543a6.957 6.957 0 106.955 6.956 6.957 6.957 0 00-6.955-6.956zm0 11.514a4.562 4.562 0 113.231-1.335 4.562 4.562 0 01-3.231 1.335zM20.748 4.512a1.755 1.755 0 101.242.514 1.755 1.755 0 00-1.242-.514z">
+                        </path>
+                    </svg>
+                </a>
+                <a href=""></a>
+                <p>Se hvad andre siger om os <a href="https://dinnerbooking.com/dk/da-DK/r3131/lago">her</a></p>
+            </div>
+        </div>
+    </footer>
 
 </body>
 
