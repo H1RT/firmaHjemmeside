@@ -3,6 +3,12 @@
   margin: 0;
 }
 
+html {
+  --primary: #d45354;
+  --font: "theFont", sans-serif;
+  --transiton: all 1s ease-in-out;
+}
+
 body {
   background-color: #f5f7f0;
   max-width: 1200px;
@@ -44,15 +50,18 @@ ul {
   gap: 18px;
   font-size: 20px;
 }
+li {
+  margin: auto 0;
+}
 li a {
   text-decoration: none;
   color: #000;
 }
 li a:hover {
-  color: #d45354;
+  color: var(--primary);
 }
 li a.active {
-  color: #d45354;
+  color: var(--primary);
 }
 
 /* 
@@ -71,7 +80,7 @@ li a.active {
     width: 100%;
     right: -110%;
     background: #f5f7f0;
-    transition: all 0.2s ease-in-out;
+    transition: var(--transiton);
   }
   #menu-primary.active {
     right: -10%;
@@ -93,7 +102,7 @@ li a.active {
   .toggle .line {
     height: 2px;
     width: 30px;
-    background: #d45354;
+    background: var(--primary);
     display: block;
     position: relative;
   }
@@ -101,23 +110,23 @@ li a.active {
     content: "";
     height: 2px;
     width: 30px;
-    background: #d45354;
+    background: var(--primary);
     display: block;
     position: absolute;
     top: -8px;
 
-    transition: all 0.2s ease-in-out;
+    transition: var(--transiton);
   }
   .toggle .line:before {
     content: "";
     height: 2px;
     width: 30px;
-    background: #d45354;
+    background: var(--primary);
     display: block;
     position: absolute;
     bottom: -8px;
 
-    transition: all 0.2s ease-in-out;
+    transition: var(--transiton);
   }
 
   .toggle.active .line {
@@ -136,37 +145,36 @@ li a.active {
 /*Text, fonts etc*/
 @font-face {
   font-family: "theFont";
-  src: url(/font/ApercuPro.woff2) format("woff2"),
-    url(/font/ApercuPro.woff) format("woff");
+  src: url(/font/ApercuPro.woff2) format("woff2"), url(/font/ApercuPro.woff) format("woff");
 }
 
 h1 {
-  font-family: "theFont", sans-serif;
+  font-family: var(--font);
   font-size: 48px;
 }
 
 h2 {
-  font-family: "theFont", sans-serif;
+  font-family: var(--font);
   font-size: 40px;
 }
 
 h3 {
-  font-family: "theFont", sans-serif;
+  font-family: var(--font);
   font-size: 36px;
 }
 
 h4 {
-  font-family: "theFont", sans-serif;
+  font-family: var(--font);
   font-size: 30px;
 }
 
 p {
-  font-family: "theFont", sans-serif;
+  font-family: var(--font);
   font-size: 18px;
 }
 
 a {
-  font-family: "theFont", sans-serif;
+  font-family: var(--font);
   font-size: 18px;
 }
 
@@ -179,7 +187,7 @@ a {
   display: block;
   width: 100px;
   height: 20px;
-  background-color: #d45354;
+  background: var(--primary);
   padding: 10px;
   text-align: center;
   border-radius: 5px;
@@ -188,13 +196,13 @@ a {
   line-height: 25px;
   text-decoration: none;
   margin: 10px;
-  border: solid 2px #d45354;
+  border: solid 2px var(--primary);
 }
 
 .btn:hover {
-  border: solid 2px #d45354;
+  border: solid 2px var(--primary);
   background-color: #f5f7f0;
-  color: #d45354;
+  color: var(--primary);
 }
 
 /*Menu*/
@@ -242,7 +250,7 @@ a {
 }
 
 .close {
-  font-family: "theFont", sans-serif;
+  font-family: var(--font), sans-serif;
   font-size: 20px;
   color: #f5f7f0;
   padding: 5px;
@@ -255,8 +263,9 @@ a {
 
 /*FAQ*/
 .faqBox {
-  border: 3px solid #d45354;
-  background-color: #d45354;
+  transition: var(--transiton);
+  border: 3px solid var(--primary);
+  background-color: var(--primary);
   border-radius: 10px;
   width: 60%;
   margin: 0 auto;
@@ -267,7 +276,7 @@ a {
 
 .faqBox:hover {
   background-color: #f5f7f0;
-  color: #d45354;
+  color: var(--primary);
 }
 
 .activeFaq {
@@ -275,7 +284,7 @@ a {
 }
 
 .activeFaq h1 {
-  color: #d45354;
+  color: var(--primary);
 }
 
 .activeFaq .plus {
@@ -292,9 +301,19 @@ a {
 }
 
 .plus {
+  transition: var(--transiton);
   margin-right: 20px;
 }
 
 .popud {
+  transition: var(--transiton);
+  padding: 20px;
+}
+
+.popud.none {
   display: none;
+}
+
+.popud.block {
+  display: block;
 }
