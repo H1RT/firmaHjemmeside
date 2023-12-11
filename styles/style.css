@@ -3,6 +3,11 @@
   margin: 0;
 }
 
+html {
+  --primary: #d45354;
+  --font: "theFont";
+}
+
 body {
   background-color: #f5f7f0;
   max-width: 1200px;
@@ -44,15 +49,18 @@ ul {
   gap: 18px;
   font-size: 20px;
 }
+li {
+  margin: auto 0;
+}
 li a {
   text-decoration: none;
   color: #000;
 }
 li a:hover {
-  color: #d45354;
+  color: var(--primary);
 }
 li a.active {
-  color: #d45354;
+  color: var(--primary);
 }
 
 /* 
@@ -93,7 +101,7 @@ li a.active {
   .toggle .line {
     height: 2px;
     width: 30px;
-    background: #d45354;
+    background: var(--primary);
     display: block;
     position: relative;
   }
@@ -101,7 +109,7 @@ li a.active {
     content: "";
     height: 2px;
     width: 30px;
-    background: #d45354;
+    background: var(--primary);
     display: block;
     position: absolute;
     top: -8px;
@@ -112,7 +120,7 @@ li a.active {
     content: "";
     height: 2px;
     width: 30px;
-    background: #d45354;
+    background: var(--primary);
     display: block;
     position: absolute;
     bottom: -8px;
@@ -136,8 +144,7 @@ li a.active {
 /*Text, fonts etc*/
 @font-face {
   font-family: "theFont";
-  src: url(/font/ApercuPro.woff2) format("woff2"),
-    url(/font/ApercuPro.woff) format("woff");
+  src: url(/font/ApercuPro.woff2) format("woff2"), url(/font/ApercuPro.woff) format("woff");
 }
 
 h1 {
@@ -179,7 +186,7 @@ a {
   display: block;
   width: 100px;
   height: 20px;
-  background-color: #d45354;
+  background: var(--primary);
   padding: 10px;
   text-align: center;
   border-radius: 5px;
@@ -188,13 +195,13 @@ a {
   line-height: 25px;
   text-decoration: none;
   margin: 10px;
-  border: solid 2px #d45354;
+  border: solid 2px var(--primary);
 }
 
 .btn:hover {
-  border: solid 2px #d45354;
+  border: solid 2px var(--primary);
   background-color: #f5f7f0;
-  color: #d45354;
+  color: var(--primary);
 }
 
 /*Menu*/
@@ -255,8 +262,9 @@ a {
 
 /*FAQ*/
 .faqBox {
-  border: 3px solid #d45354;
-  background-color: #d45354;
+  transition: all 0.2s ease-in-out;
+  border: 3px solid var(--primary);
+  background-color: var(--primary);
   border-radius: 10px;
   width: 60%;
   margin: 0 auto;
@@ -267,7 +275,7 @@ a {
 
 .faqBox:hover {
   background-color: #f5f7f0;
-  color: #d45354;
+  color: var(--primary);
 }
 
 .activeFaq {
@@ -275,7 +283,7 @@ a {
 }
 
 .activeFaq h1 {
-  color: #d45354;
+  color: var(--primary);
 }
 
 .activeFaq .plus {
@@ -292,6 +300,7 @@ a {
 }
 
 .plus {
+  transition: all 0.2s ease-in-out;
   margin-right: 20px;
 }
 
