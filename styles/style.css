@@ -5,7 +5,8 @@
 
 html {
   --primary: #d45354;
-  --font: "theFont";
+  --font: "theFont", sans-serif;
+  --transiton: all 1s ease-in-out;
 }
 
 body {
@@ -79,7 +80,7 @@ li a.active {
     width: 100%;
     right: -110%;
     background: #f5f7f0;
-    transition: all 0.2s ease-in-out;
+    transition: var(--transiton);
   }
   #menu-primary.active {
     right: -10%;
@@ -114,7 +115,7 @@ li a.active {
     position: absolute;
     top: -8px;
 
-    transition: all 0.2s ease-in-out;
+    transition: var(--transiton);
   }
   .toggle .line:before {
     content: "";
@@ -125,7 +126,7 @@ li a.active {
     position: absolute;
     bottom: -8px;
 
-    transition: all 0.2s ease-in-out;
+    transition: var(--transiton);
   }
 
   .toggle.active .line {
@@ -148,32 +149,32 @@ li a.active {
 }
 
 h1 {
-  font-family: "theFont", sans-serif;
+  font-family: var(--font);
   font-size: 48px;
 }
 
 h2 {
-  font-family: "theFont", sans-serif;
+  font-family: var(--font);
   font-size: 40px;
 }
 
 h3 {
-  font-family: "theFont", sans-serif;
+  font-family: var(--font);
   font-size: 36px;
 }
 
 h4 {
-  font-family: "theFont", sans-serif;
+  font-family: var(--font);
   font-size: 30px;
 }
 
 p {
-  font-family: "theFont", sans-serif;
+  font-family: var(--font);
   font-size: 18px;
 }
 
 a {
-  font-family: "theFont", sans-serif;
+  font-family: var(--font);
   font-size: 18px;
 }
 
@@ -249,7 +250,7 @@ a {
 }
 
 .close {
-  font-family: "theFont", sans-serif;
+  font-family: var(--font), sans-serif;
   font-size: 20px;
   color: #f5f7f0;
   padding: 5px;
@@ -262,7 +263,7 @@ a {
 
 /*FAQ*/
 .faqBox {
-  transition: all 0.2s ease-in-out;
+  transition: var(--transiton);
   border: 3px solid var(--primary);
   background-color: var(--primary);
   border-radius: 10px;
@@ -300,10 +301,19 @@ a {
 }
 
 .plus {
-  transition: all 0.2s ease-in-out;
+  transition: var(--transiton);
   margin-right: 20px;
 }
 
 .popud {
+  transition: var(--transiton);
+  padding: 20px;
+}
+
+.popud.none {
   display: none;
+}
+
+.popud.block {
+  display: block;
 }

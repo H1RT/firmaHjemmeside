@@ -16,9 +16,7 @@ function faq(faqNumber) {
       //Ingen kode, da denne FAQ boks skal forblive åben
     } else {
       document.getElementById("faq" + i).style.display = "none";
-      document
-        .getElementById("faq" + i)
-        .parentElement.classList.remove("activeFaq");
+      document.getElementById("faq" + i).parentElement.classList.remove("activeFaq");
     }
   }
 }
