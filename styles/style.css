@@ -6,7 +6,7 @@
 html {
   --primary: #d45354;
   --font: "theFont", sans-serif;
-  --transiton: all 1s ease-in-out;
+  --transiton: all 0.2s ease-in-out;
   --background: #f5f7f0;
 }
 
@@ -158,8 +158,7 @@ li a.active {
 /*Text, fonts etc*/
 @font-face {
   font-family: "theFont";
-  src: url(/font/ApercuPro.woff2) format("woff2"),
-    url(/font/ApercuPro.woff) format("woff");
+  src: url(/font/ApercuPro.woff2) format("woff2"), url(/font/ApercuPro.woff) format("woff");
 }
 
 h1 {
@@ -224,6 +223,15 @@ a:hover {
   color: var(--primary);
 }
 
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.button-wrapper .btn {
+  margin: 30px 10px;
+}
+
 /*Menu*/
 .pdf {
   height: 90%;
@@ -282,8 +290,7 @@ a:hover {
 
 .mainMenu {
   height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(/images/IMG_3268.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/IMG_3268.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -329,7 +336,7 @@ a:hover {
   background-color: var(--background);
 }
 
-.activeFaq h1 {
+.activeFaq h2 {
   color: var(--primary);
 }
 
@@ -344,6 +351,7 @@ a:hover {
 
 .faqAnswer {
   color: black;
+  padding: 20px;
 }
 
 .plus {
@@ -366,6 +374,10 @@ a:hover {
 /*
 *Footer
 */
+footer.menu-footer {
+  margin-top: 0;
+}
+
 footer {
   margin-top: 50px;
   background-color: var(--background);
@@ -375,7 +387,7 @@ footer {
 .inner-footer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 80px;
+  gap: 70px;
   padding: 100px 0;
   max-width: 1200px;
   margin: 0px auto;
