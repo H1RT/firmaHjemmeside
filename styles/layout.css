@@ -11,9 +11,20 @@
   margin-bottom: 80px !important;
 }
 
+.content p {
+  margin-bottom: 20px;
+}
+
 .image-wrapper img {
   border-radius: var(--border-radius);
   object-fit: cover;
+  height: 500px;
+}
+
+@media (max-width: 800px) {
+  .image-wrapper img {
+    height: 100%;
+  }
 }
 
 @media (max-width: 800px) {
@@ -21,6 +32,7 @@
   .faq,
   .omos {
     grid-template-columns: 1fr;
+    margin-bottom: 40px !important;
   }
 }
 .text-image.order .image-wrapper {
@@ -71,13 +83,19 @@
   }
 }
 
-.kontakt-form .image-wrapper {
+.kontakt-form .kontakt-image {
   border-radius: 0;
   height: 500px;
 }
 
+.kontakt-form .kontakt-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
 @media (max-width: 800px) {
-  .kontakt-form .image-wrapper {
+  .kontakt-form .kontakt-image {
     border-radius: 0;
     height: 300px;
   }

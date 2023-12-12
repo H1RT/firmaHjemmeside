@@ -31,6 +31,12 @@ main.mainMenu {
   max-width: inherit;
 }
 
+@media (max-width: 800px) {
+  main.mainMenu {
+    height: 50vh;
+  }
+}
+
 /*
 * Header
 */
@@ -274,6 +280,7 @@ a:hover {
   text-decoration: none;
   border: solid 2px var(--primary);
   opacity: 1 !important;
+  cursor: pointer;
 }
 
 @media (max-width: 800px) {
@@ -294,7 +301,7 @@ a:hover {
 }
 
 .button-wrapper .btn {
-  margin: 30px 10px;
+  margin: 0px 10px;
 }
 
 /*Menu*/
@@ -356,7 +363,7 @@ a:hover {
 .mainMenu {
   height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(/images/IMG_3268.jpg);
+    url(../images/billede4.webp);
   background-size: cover;
   background-position: center;
 }
@@ -370,6 +377,12 @@ a:hover {
   gap: 5%;
 }
 
+@media (max-width: 800px) {
+  .menuContainer {
+    height: 50vh;
+  }
+}
+
 .menuHeader {
   color: #d45354;
 }
@@ -378,6 +391,13 @@ a:hover {
   justify-content: center;
   display: flex;
   gap: 30px;
+}
+
+@media (max-width: 800px) {
+  .btnContainer {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 /*FAQ*/
@@ -440,7 +460,8 @@ a:hover {
 /*
 *Footer
 */
-footer.menu-footer {
+footer.menu-footer,
+.selskaber {
   margin-top: 0;
 }
 
@@ -496,7 +517,7 @@ footer .inner-footer .logo2 img {
 */
 .hero {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(/images/IMG_3273.jpg);
+    url(/images/billede3.webp);
   color: white;
   padding: 200px;
   text-align: center;
@@ -505,6 +526,26 @@ footer .inner-footer .logo2 img {
 @media (max-width: 800px) {
   .hero {
     padding: 50px;
+  }
+}
+
+.hero-omos {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/images/billede5.webp);
+}
+
+.hero-faq {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/images/billede7.webp);
+}
+
+.hero-kontakt {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/images/billede1.webp);
+}
+@media (max-width: 800px) {
+  .hero-kontakt h1 {
+    margin-bottom: 0 !important;
   }
 }
 
@@ -519,25 +560,20 @@ footer .inner-footer .logo2 img {
   margin-bottom: 10px;
 }
 
-.hero h4 {
-  margin-bottom: 10px;
+.hero h3 {
+  margin-bottom: 20px;
 }
 
-footer.selskaber {
-  margin-top: 0;
-}
+@media (max-width: 800px) {
+  .hero h1 {
+    margin-bottom: 20px;
+  }
 
-/*Reviews forside*/
-.checked {
-  color: orange;
-}
+  .hero h4 {
+    margin-bottom: 10px;
+  }
 
-.reviewContainer {
-  display: flex;
-  gap: 100px;
-  overflow: hidden;
-}
-
-.review {
-  width: 1000px;
+  footer.selskaber {
+    margin-top: 0;
+  }
 }
