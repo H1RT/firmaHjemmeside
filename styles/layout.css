@@ -3,7 +3,6 @@
 */
 
 .text-image,
-.kontakt-form,
 .faq,
 .omos {
   display: grid;
@@ -12,35 +11,31 @@
   margin-bottom: 80px !important;
 }
 
+.image-wrapper img {
+  border-radius: var(--border-radius);
+  object-fit: cover;
+}
+
 @media (max-width: 800px) {
   .text-image,
-  .kontakt-form,
   .faq,
   .omos {
     grid-template-columns: 1fr;
   }
 }
-.text-image.order .image {
+.text-image.order .image-wrapper {
   order: -1;
 }
 @media (max-width: 800px) {
-  .text-image.order .image {
+  .text-image.order .image-wrapper {
     order: 1;
   }
 }
 
 .text-image,
-.kontakt-form,
 .content {
   margin: auto 0;
   /*text-align: center;*/
-}
-
-.image {
-  height: 400px;
-  width: 100%;
-  border-radius: var(--border-radius);
-  background: #cacaca;
 }
 
 .instagram {
@@ -56,4 +51,56 @@
 /*Flex*/
 .flex {
   display: flex;
+}
+
+/*
+*
+*/
+
+.kontakt-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  border: 2px solid var(--primary);
+  min-height: 500px;
+}
+
+@media (max-width: 800px) {
+  .kontakt-form {
+    grid-template-columns: 1fr;
+  }
+}
+
+.kontakt-form .image-wrapper {
+  border-radius: 0;
+  height: 500px;
+}
+
+@media (max-width: 800px) {
+  .kontakt-form .image-wrapper {
+    border-radius: 0;
+    height: 300px;
+  }
+}
+
+.kontakt-form .content {
+  text-align: center;
+}
+@media (max-width: 800px) {
+  .kontakt-form .content {
+    margin-bottom: 30px;
+  }
+}
+
+.kontakt-form img {
+  height: 40px;
+  margin-bottom: 20px;
+}
+
+.kontakt-form .content p {
+  margin-bottom: 20px;
+}
+
+.kontakt-form .content h4 {
+  margin-top: 20px;
 }

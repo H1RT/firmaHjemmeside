@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
 }
+
 img {
   height: auto;
   width: 100%;
@@ -175,7 +176,8 @@ li a.active {
 /*Text, fonts etc*/
 @font-face {
   font-family: "theFont";
-  src: url(/font/ApercuPro.woff2) format("woff2"), url(/font/ApercuPro.woff) format("woff");
+  src: url(/font/ApercuPro.woff2) format("woff2"),
+    url(/font/ApercuPro.woff) format("woff");
 }
 
 h1 {
@@ -202,7 +204,7 @@ h2 {
 
 h3 {
   font-family: var(--font);
-  font-size: 36px;
+  font-size: 34px;
 }
 
 @media (max-width: 800px) {
@@ -271,6 +273,7 @@ a:hover {
   line-height: 25px;
   text-decoration: none;
   border: solid 2px var(--primary);
+  opacity: 1 !important;
 }
 
 @media (max-width: 800px) {
@@ -352,7 +355,8 @@ a:hover {
 
 .mainMenu {
   height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/IMG_3268.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/images/IMG_3268.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -367,7 +371,7 @@ a:hover {
 }
 
 .menuHeader {
-  color: #f5f7f0;
+  color: #d45354;
 }
 
 .btnContainer {
@@ -478,11 +482,11 @@ footer iframe {
   border-radius: var(--border-radius);
 }
 
-footer .inner-footer .logo img {
+footer .inner-footer .logo2 img {
   height: 300px;
 }
 @media (max-width: 800px) {
-  footer .inner-footer .logo img {
+  footer .inner-footer .logo2 img {
     height: 200px;
   }
 }
@@ -491,7 +495,8 @@ footer .inner-footer .logo img {
 * Selskaber
 */
 .hero {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/IMG_3273.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/images/IMG_3273.jpg);
   color: white;
   padding: 200px;
   text-align: center;
@@ -514,10 +519,25 @@ footer .inner-footer .logo img {
   margin-bottom: 10px;
 }
 
-.hero h3 {
+.hero h4 {
   margin-bottom: 10px;
 }
 
 footer.selskaber {
   margin-top: 0;
+}
+
+/*Reviews forside*/
+.checked {
+  color: orange;
+}
+
+.reviewContainer {
+  display: flex;
+  gap: 100px;
+  overflow: hidden;
+}
+
+.review {
+  width: 1000px;
 }
