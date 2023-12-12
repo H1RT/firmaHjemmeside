@@ -2,15 +2,21 @@
 * Forside
 */
 
-.text-image {
+.text-image,
+.kontakt-form,
+.faq,
+.omos {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
-  margin-bottom: 80px;
+  margin-bottom: 80px !important;
 }
 
 @media (max-width: 800px) {
-  .text-image {
+  .text-image,
+  .kontakt-form,
+  .faq,
+  .omos {
     grid-template-columns: 1fr;
   }
 }
@@ -23,15 +29,17 @@
   }
 }
 
-.text-image .content {
+.text-image,
+.kontakt-form,
+.content {
   margin: auto 0;
   /*text-align: center;*/
 }
 
-.text-image .image {
+.image {
   height: 400px;
   width: 100%;
-  border-radius: 32px;
+  border-radius: var(--border-radius);
   background: #cacaca;
 }
 
@@ -43,7 +51,6 @@
 @media (max-width: 800px) {
   .instagram {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
   }
 }
 /*Flex*/
