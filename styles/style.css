@@ -48,11 +48,6 @@ header {
   top: 0px;
   background-color: var(--background);
 }
-@media (max-width: 800px) {
-  header {
-    /* margin-bottom: var(--margin-bottom); */
-  }
-}
 
 .inner-header {
   margin-bottom: var(--margin-bottom);
@@ -212,12 +207,12 @@ h2 {
 
 h3 {
   font-family: var(--font);
-  font-size: 34px;
+  font-size: 22px;
 }
 
 @media (max-width: 800px) {
   h3 {
-    font-size: 24px;
+    font-size: 18px;
   }
 }
 

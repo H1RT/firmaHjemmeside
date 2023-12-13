@@ -32,6 +32,9 @@
   .image-wrapper img {
     height: 100%;
   }
+  .image-wrapper iframe {
+    height: 200px;
+  }
 }
 
 @media (max-width: 800px) {
