@@ -28,6 +28,7 @@ main {
   max-width: 1200px;
   margin: 0px auto;
   padding: 0 20px;
+  box-sizing: border-box;
 }
 
 main.mainMenu {
@@ -47,6 +48,7 @@ header {
   position: sticky;
   top: 0px;
   background-color: var(--background);
+  z-index: 100;
 }
 
 .inner-header {
@@ -61,6 +63,12 @@ header {
 
 header img {
   height: 40px;
+}
+
+@media (max-width: 800px) {
+  header {
+    padding: 0 20px;
+  }
 }
 
 @media (max-width: 800px) {
@@ -106,16 +114,18 @@ li a.active {
   .logo {
     position: relative;
     z-index: 100;
+    width: 100px;
   }
   #menu-primary {
     position: fixed;
     top: 0px;
     bottom: 0px;
-    height: 48%;
+    height: 55vh;
     width: 101%;
     right: -110%;
     background-color: var(--background);
     transition: var(--transiton);
+    margin-left: auto;
   }
   #menu-primary.active {
     right: -6%;
@@ -132,6 +142,7 @@ li a.active {
     background: transparent;
     align-items: center;
     z-index: 100;
+    order: 1;
   }
 
   .toggle .line {
