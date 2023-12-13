@@ -18,7 +18,15 @@
 .image-wrapper img {
   border-radius: var(--border-radius);
   object-fit: cover;
-  height: 500px;
+  height: 330px;
+  
+}
+
+.image-wrapper iframe {
+  border-radius: var(--border-radius);
+  object-fit: contain;
+  height: 330px;
+  width: 100%;
 }
 
 @media (max-width: 800px) {
@@ -33,6 +41,7 @@
   .omos {
     grid-template-columns: 1fr;
     margin-bottom: 40px !important;
+    gap: 10px;
   }
 }
 .text-image.order .image-wrapper {
@@ -48,6 +57,10 @@
 .content {
   margin: auto 0;
   /*text-align: center;*/
+}
+
+.text-image, .content h2 {
+  margin-bottom: 15px;
 }
 
 .instagram {
@@ -103,6 +116,7 @@
 
 .kontakt-form .content {
   text-align: center;
+  margin: auto 0;
 }
 @media (max-width: 800px) {
   .kontakt-form .content {
@@ -121,4 +135,5 @@
 
 .kontakt-form .content h4 {
   margin-top: 20px;
+  margin-bottom: 10px;
 }
