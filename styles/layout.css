@@ -7,7 +7,7 @@
 .omos {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
+  gap: 60px;
   margin-bottom: var(--margin-bottom-hero);
 }
 
@@ -55,6 +55,12 @@
 .text-image .content {
   margin: auto 0;
   /*text-align: center;*/
+}
+
+@media (max-width: 800px) {
+  .text-image .content {
+    margin-bottom: 10px;
+  }
 }
 
 .text-image .content h2 {

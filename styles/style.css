@@ -356,13 +356,13 @@ a:hover {
 .close {
   font-family: var(--font), sans-serif;
   font-size: 20px;
-  color: var(--background);
-  padding: 5px;
+  color: var(--primary);
 }
 
 .closeDiv {
   text-align: right;
   cursor: pointer;
+  margin: 20px;
 }
 
 .mainMenu {
@@ -538,7 +538,7 @@ footer .inner-footer .logo2 img {
 @media (max-width: 800px) {
   .hero {
     padding: 50px;
-    margin-bottom: 20px !important;
+    margin-bottom: 40px !important;
     background-size: cover;
   }
 }
