@@ -15,6 +15,9 @@ html {
   --transiton: all 0.2s ease-in-out;
   --background: #f5f7f0;
   --border-radius: 16px;
+  --margin-bottom: 30px;
+  --margin-bottom-hero: 80px;
+  --margin-bottom-text: 10px;
 }
 
 body {
@@ -47,12 +50,12 @@ header {
 }
 @media (max-width: 800px) {
   header {
-    margin-bottom: 30px;
+    /* margin-bottom: var(--margin-bottom); */
   }
 }
 
 .inner-header {
-  margin-bottom: 30px;
+  margin-bottom: var(--margin-bottom);
   max-width: 1200px;
   margin: 0px auto;
   display: flex;
@@ -182,8 +185,7 @@ li a.active {
 /*Text, fonts etc*/
 @font-face {
   font-family: "theFont";
-  src: url(font/ApercuPro.woff2) format("woff2"),
-    url(font/ApercuPro.woff) format("woff");
+  src: url(font/ApercuPro.woff2) format("woff2"), url(font/ApercuPro.woff) format("woff");
 }
 
 h1 {
@@ -221,18 +223,21 @@ h3 {
 
 h4 {
   font-family: var(--font);
-  font-size: 30px;
+  font-size: 22px;
 }
 
 @media (max-width: 800px) {
   h4 {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 
 p {
   font-family: var(--font);
   font-size: 18px;
+}
+p.hero-text-margin {
+  margin-bottom: 0;
 }
 
 .p-hero {
@@ -362,8 +367,7 @@ a:hover {
 
 .mainMenu {
   height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(../images/billede4.webp);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/billede4.webp);
   background-size: cover;
   background-position: center;
 }
@@ -382,7 +386,6 @@ a:hover {
   color: white;
   text-align: center;
 }
-
 
 @media (max-width: 800px) {
   .menuContainer {
@@ -410,16 +413,22 @@ a:hover {
 /*FAQ*/
 .faqBox {
   transition: var(--transiton);
-    border-bottom: 3px solid var(--primary);
-    width: 60%;
-    margin: 0 auto;
-    padding: 10px;
-    cursor: pointer;
-    color: var(--primary);
+  border-bottom: 3px solid var(--primary);
+  width: 60%;
+  margin: 0 auto;
+  padding: 10px;
+  cursor: pointer;
+  color: var(--primary);
+}
+
+@media (max-width: 800px) {
+  .faqBox {
+    width: 90%;
+  }
 }
 
 .faqBox:hover {
-opacity: 0.6;
+  opacity: 0.6;
 }
 
 .activeFaq {
@@ -458,7 +467,7 @@ opacity: 0.6;
 
 .faqanimation {
   transition: max-height 4s ease-in-out;
-  max-height: 1000px;
+  max-height: 800px;
 }
 
 /*
@@ -498,7 +507,7 @@ footer {
 }
 
 .info-2 h4 {
-  margin-bottom: 10px;
+  margin-bottom: var(--margin-bottom-text);
 }
 
 footer iframe {
@@ -520,8 +529,7 @@ footer .inner-footer .logo2 img {
 * Selskaber
 */
 .hero {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(../images/billede3.webp);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/billede3.webp);
   color: white;
   padding: 200px;
   text-align: center;
@@ -530,32 +538,35 @@ footer .inner-footer .logo2 img {
 @media (max-width: 800px) {
   .hero {
     padding: 50px;
+    margin-bottom: 20px !important;
+    background-size: cover;
   }
 }
 
 .hero-forside {
-  margin-bottom: 80px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-  url(../images/billede1.webp);
+  margin-bottom: var(--margin-bottom-hero);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/billede1.webp);
 }
 
 .hero-omos {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(../images/billede12.webp);
-    background-position: 0% 80%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/billede12.webp);
+  background-position: 0% 80%;
 }
 
 .hero-faq {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(../images/billede7.webp);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/billede7.webp);
 }
 
 .hero-kontakt {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(../images/billede1.webp);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/billede1.webp);
 }
 @media (max-width: 800px) {
   .hero-kontakt h1 {
+    margin-bottom: 0 !important;
+  }
+}
+@media (max-width: 800px) {
+  .hero-selskaber {
     margin-bottom: 0 !important;
   }
 }
@@ -563,25 +574,25 @@ footer .inner-footer .logo2 img {
 .hero.hero-omos,
 .hero-kontakt,
 .hero-faq {
-  margin-bottom: 40px;
+  margin-bottom: var(--margin-bottom);
 }
 
 .hero h1 {
   color: var(--primary);
-  margin-bottom: 10px;
+  margin-bottom: var(--margin-bottom-text);
 }
 
 .hero h3 {
-  margin-bottom: 20px;
+  margin-bottom: var(--margin-bottom-text);
 }
 
 @media (max-width: 800px) {
   .hero h1 {
-    margin-bottom: 20px;
+    margin-bottom: var(--margin-bottom-text);
   }
 
   .hero h4 {
-    margin-bottom: 10px;
+    margin-bottom: var(--margin-bottom-text);
   }
 
   footer.selskaber {

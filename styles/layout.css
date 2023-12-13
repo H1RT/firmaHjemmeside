@@ -8,18 +8,17 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
-  margin-bottom: 80px !important;
+  margin-bottom: var(--margin-bottom-hero);
 }
 
 .content p {
-  margin-bottom: 20px;
+  margin-bottom: var(--margin-bottom-text);
 }
 
 .image-wrapper img {
   border-radius: var(--border-radius);
   object-fit: cover;
   height: 330px;
-  
 }
 
 .image-wrapper iframe {
@@ -40,7 +39,7 @@
   .faq,
   .omos {
     grid-template-columns: 1fr;
-    margin-bottom: 40px !important;
+    margin-bottom: var(--margin-bottom);
     gap: 10px;
   }
 }
@@ -53,14 +52,13 @@
   }
 }
 
-.text-image,
-.content {
+.text-image .content {
   margin: auto 0;
   /*text-align: center;*/
 }
 
-.text-image, .content h2 {
-  margin-bottom: 15px;
+.text-image .content h2 {
+  margin-bottom: var(--margin-bottom-text);
 }
 
 .instagram {
@@ -120,20 +118,20 @@
 }
 @media (max-width: 800px) {
   .kontakt-form .content {
-    margin-bottom: 30px;
+    margin-bottom: var(--margin-bottom);
   }
 }
 
 .kontakt-form img {
   height: 40px;
-  margin-bottom: 20px;
+  margin-bottom: var(--margin-bottom-text);
 }
 
 .kontakt-form .content p {
-  margin-bottom: 20px;
+  margin-bottom: var(--margin-bottom-text);
 }
 
 .kontakt-form .content h4 {
   margin-top: 20px;
-  margin-bottom: 10px;
+  margin-bottom: var(--margin-bottom-text);
 }
