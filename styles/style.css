@@ -108,8 +108,11 @@ li a.active {
   .logo {
     position: relative;
     z-index: 100;
-    width: 100px;
   }
+  .logo img {
+    width: 120px;
+  }
+
   #menu-primary {
     position: fixed;
     top: 0px;
