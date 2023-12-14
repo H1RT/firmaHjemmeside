@@ -18,13 +18,13 @@
 .image-wrapper img {
   border-radius: var(--border-radius);
   object-fit: cover;
-  height: 330px;
+  height: 400px;
 }
 
 .image-wrapper iframe {
   border-radius: var(--border-radius);
   object-fit: contain;
-  height: 330px;
+  height: 400px;
   width: 100%;
 }
 
